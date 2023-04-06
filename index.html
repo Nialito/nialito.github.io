@@ -1,0 +1,50 @@
+
+<html>
+  <head>
+    <title>Hello, world.</title>
+
+    <style>
+      body {
+        font-family: courier, monospace;
+        padding: 10%;
+        text-align: center;
+        font-size: 13px;
+        line-height: 1.65em;
+      }
+
+      img {
+        margin: 20px 10px 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p>Hello, world.</p>
+    <p>
+      <a href="human.txt">Check out human.txt</a><br>
+      <a href="https://nialito.github.io/">Contribute</a>
+    </p>
+
+    <script type="text/javascript">
+      fetch('./human.txt').then(function (data) {
+        return data.text()
+      }).then(function (data) {
+        const logins = data.split('\n')
+        logins.forEach(function (login) {
+          if(!login) return
+
+          const a = document.createElement('a')
+          a.href = 'https://github.com/' + login
+          const image = new Image(50, 50)
+          image.src = 'https://github.com/' + login + '.png?size=100'
+          a.appendChild(image)
+          document.body.appendChild(a)
+
+          image.onerror = function () {
+            a.remove()
+          }
+        })
+      })
+    </script>
+  </body>
+</html>
