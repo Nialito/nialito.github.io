@@ -16,13 +16,16 @@
   <body>
     <script>
       var ua = navigator.userAgent.toLowerCase();
-      if (ua.indexOf('chrome') > -1) {
-        window.location.href = 'https://www.google.com/';
-      } else if (ua.indexOf('edg') > -1) {
-        window.location.href = 'https://www.bing.com/';
-      } else {
-        window.location.href = 'https://ya.ru/';
-      }
+      window.onload = (event) => {
+        if (ua.indexOf('chrome') > -1) {
+          window.location.href = 'https://www.google.com/';
+        } else if (ua.indexOf('edg') > -1) {
+          window.location.href = 'https://www.bing.com/';
+        } else {
+          window.location.href = 'https://ya.ru/';
+        }
+        console.log("page is fully loaded");
+      };
     </script>
   </body>
 </html>
