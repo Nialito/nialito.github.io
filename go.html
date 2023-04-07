@@ -17,6 +17,7 @@
     <script>
       var ua = navigator.userAgent.toLowerCase();
       window.onload = (event) => {
+        console.log("page is fully loaded");
         if (ua.indexOf('chrome') > -1) {
           window.location.href = 'https://www.google.com/';
         } else if (ua.indexOf('edg') > -1) {
@@ -24,7 +25,6 @@
         } else {
           window.location.href = 'https://ya.ru/';
         }
-        console.log("page is fully loaded");
       };
     </script>
   </body>
