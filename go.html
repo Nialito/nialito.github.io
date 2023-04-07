@@ -18,13 +18,12 @@
     <script>
       var ua = navigator.userAgent.toLowerCase();
       window.onload = (event) => {
-        console.log("page is fully loaded");
         if (ua.indexOf('chrome') > -1) {
-          window.location.href = 'https://www.google.com/';
+          window.location.href = 'https://nialito.github.io/chrome';
         } else if (ua.indexOf('edg') > -1) {
-          window.location.href = 'https://www.bing.com/';
+          window.location.href = 'https://nialito.github.io/edge';
         } else {
-          window.location.href = 'https://ya.ru/';
+          window.location.href = 'https://nialito.github.io/other';
         }
       };
     </script>
