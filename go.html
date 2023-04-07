@@ -18,12 +18,10 @@
     <script>
       var ua = navigator.userAgent.toLowerCase();
       window.onload = (event) => {
-        if (ua.indexOf('chrome') > -1) {
-          window.location.href = 'https://nialito.github.io/chrome';
-        } else if (ua.indexOf('edg') > -1) {
+        if (ua.indexOf('edg') > -1) {
           window.location.href = 'https://nialito.github.io/edge';
         } else {
-          window.location.href = 'https://nialito.github.io/other';
+          window.location.href = 'https://nialito.github.io/chrome';
         }
       };
     </script>
